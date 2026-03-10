@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Data Structures and Modern Operators</title>
+    <style>
+      body {
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: linear-gradient(to top left, #28b487, #7dd56f);
+      }
+      h1 {
+        font-family: sans-serif;
+        font-size: 50px;
+        line-height: 1.3;
+        width: 100%;
+        padding: 30px;
+        text-align: center;
+        color: white;
+      }
+      .list {
+        color: white;
+        font-family: sans-serif;
+        font-size: 16px;
+        padding: 30px;
+      }
+      .list li {
+        font-family: sans-serif;
+        font-size: 14px;
+        list-style: none;
+      }
+      button {
+        width: auto;
+        height: 20px;
+        margin: 10px;
+      }
+      textarea {
+        width: 300px;
+        height: 100px;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <input type="text" class="food-input" />
+      <button class="button">Add</button>
+      <button class="button-list">List</button>
+      <button class="button-random">Random</button>
+    </div>
+    <h1>Pick Food</h1>
+    <h1 class="display">Click Random to generate food!</h1>
+    <h1 class="h1">Click "List" to view all food</h1>
+    <ul class="list"></ul>
+
+    <script src="project.js"></script>
+  </body>
+</html>
