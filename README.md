@@ -65,4 +65,12 @@
     </ol>
   </section>
 
+<section class="preview">
+  <h2>🎥 Preview</h2>
+  
+
+https://github.com/user-attachments/assets/46200f34-bcc5-4300-91e3-5fd3ea11c753
+
+
+</section>
 </main>
