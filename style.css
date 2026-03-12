@@ -2,15 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --primary-color: #6366f1;
-  --primary-hover: #4f46e5;
-  --bg-gradient: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
-  --card-bg: rgba(255, 255, 255, 0.9);
-  --text-main: #1e293b;
-  --text-muted: #64748b;
-  --border-color: #e2e8f0;
-  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --primary-color: #8b5cf6;
+  --primary-hover: #7c3aed;
+  --bg-gradient: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+  --card-bg: rgba(18, 18, 20, 0.75);
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --border-color: rgba(139, 92, 246, 0.2);
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
   --radius: 16px;
   --transition: all 0.3s ease;
 }
@@ -64,8 +64,8 @@ body {
 }
 
 .display-card {
-  background: #f8fafc;
-  border: 1px dashed var(--border-color);
+  background: rgba(30, 30, 36, 0.6);
+  border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 30px 20px;
   margin-bottom: 30px;
@@ -74,8 +74,8 @@ body {
 
 .display-card:hover {
   border-color: var(--primary-color);
-  background: #fff;
-  box-shadow: var(--shadow-sm);
+  background: rgba(40, 40, 48, 0.8);
+  box-shadow: var(--shadow-sm), 0 0 15px rgba(139, 92, 246, 0.3);
 }
 
 .display {
@@ -99,6 +99,8 @@ body {
 .food-input {
   flex: 1;
   padding: 12px 16px;
+  background: rgba(15, 12, 41, 0.5);
+  color: var(--text-main);
   border: 1px solid var(--border-color);
   border-radius: 8px;
   font-size: 14px;
@@ -107,9 +109,14 @@ body {
   transition: var(--transition);
 }
 
+.food-input::placeholder {
+  color: rgba(148, 163, 184, 0.5);
+}
+
 .food-input:focus {
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+  background: rgba(15, 12, 41, 0.8);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.25);
 }
 
 button {
@@ -127,12 +134,14 @@ button {
 }
 
 .btn-add {
-  background: #f1f5f9;
+  background: rgba(255, 255, 255, 0.1);
   color: var(--text-main);
+  border: 1px solid var(--border-color);
 }
 
 .btn-add:hover {
-  background: #e2e8f0;
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .action-buttons {
@@ -145,26 +154,26 @@ button {
 }
 
 .btn-secondary {
-  background: #f8fafc;
+  background: rgba(30, 30, 36, 0.8);
   color: var(--text-main);
   border: 1px solid var(--border-color);
 }
 
 .btn-secondary:hover {
-  background: #f1f5f9;
-  border-color: #cbd5e1;
+  background: rgba(50, 50, 60, 0.9);
+  border-color: var(--primary-color);
 }
 
 .btn-primary {
   background: var(--primary-color);
   color: white;
-  box-shadow: 0 4px 6px -1px rgba(99, 102, 241, 0.4);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4);
 }
 
 .btn-primary:hover {
   background: var(--primary-hover);
   transform: translateY(-1px);
-  box-shadow: 0 6px 8px -1px rgba(99, 102, 241, 0.5);
+  box-shadow: 0 6px 16px rgba(139, 92, 246, 0.6);
 }
 
 .btn-primary:active {
@@ -183,7 +192,7 @@ button {
   font-weight: 600;
   color: var(--text-main);
   padding: 0;
-  background: #fff;
+  background: rgba(30, 30, 36, 0.6);
   border-radius: 12px;
 }
 
@@ -199,7 +208,7 @@ button {
   font-size: 15px;
   color: var(--text-muted);
   padding: 10px 0;
-  border-bottom: 1px solid #f1f5f9;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   display: flex;
   align-items: center;
 }
@@ -212,14 +221,17 @@ button {
 /* Styling the clear button dynamically added inside JS */
 .list button {
   width: 100%;
-  background: #fee2e2;
-  color: #ef4444;
+  background: rgba(239, 68, 68, 0.15);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.3);
   margin-top: 10px;
   font-weight: 600;
 }
 
 .list button:hover {
-  background: #fecaca;
+  background: rgba(239, 68, 68, 0.25);
+  color: #fff;
+  border-color: rgba(239, 68, 68, 0.5);
 }
 
 .hidden {
