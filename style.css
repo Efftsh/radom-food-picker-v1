@@ -1,0 +1,237 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #6366f1;
+  --primary-hover: #4f46e5;
+  --bg-gradient: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --radius: 16px;
+  --transition: all 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text-main);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.app-container {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  max-width: 480px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  padding: 40px 30px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  background: linear-gradient(to right, var(--primary-color), #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+  font-weight: 400;
+  margin-bottom: 30px;
+  min-height: 20px;
+}
+
+.display-card {
+  background: #f8fafc;
+  border: 1px dashed var(--border-color);
+  border-radius: 12px;
+  padding: 30px 20px;
+  margin-bottom: 30px;
+  transition: var(--transition);
+}
+
+.display-card:hover {
+  border-color: var(--primary-color);
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+}
+
+.display {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.food-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+  transition: var(--transition);
+}
+
+.food-input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+button {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-add {
+  background: #f1f5f9;
+  color: var(--text-main);
+}
+
+.btn-add:hover {
+  background: #e2e8f0;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.action-buttons button {
+  flex: 1;
+}
+
+.btn-secondary {
+  background: #f8fafc;
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(99, 102, 241, 0.4);
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 8px -1px rgba(99, 102, 241, 0.5);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* List Styles */
+.list-container {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.list {
+  list-style: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-main);
+  padding: 0;
+  background: #fff;
+  border-radius: 12px;
+}
+
+.list:not(:empty) {
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+}
+
+/* Specific styling for the generated list items */
+.list li {
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--text-muted);
+  padding: 10px 0;
+  border-bottom: 1px solid #f1f5f9;
+  display: flex;
+  align-items: center;
+}
+
+.list li:last-of-type {
+  border-bottom: none;
+  margin-bottom: 15px;
+}
+
+/* Styling the clear button dynamically added inside JS */
+.list button {
+  width: 100%;
+  background: #fee2e2;
+  color: #ef4444;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.list button:hover {
+  background: #fecaca;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Animation for the list appearance */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.list {
+  animation: fadeIn 0.4s ease-out;
+}
